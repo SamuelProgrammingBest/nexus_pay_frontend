@@ -167,7 +167,7 @@ const Bills = () => {
                 <img
                   src={bill.image}
                   alt={bill.desc}
-                  className="h-15 w-15 rounded-md bg-white/5 p-1 object-contain"
+                  className="h-10 w-10 rounded-md bg-white/5 p-1 object-contain"
                 />
                 <div className="flex-1 min-w-0">
                   <div className="truncate font-medium">{bill.desc}</div>
