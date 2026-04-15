@@ -1,24 +1,35 @@
-@import "tailwindcss";
+/* Replaced Tailwind usage with app-specific utility classes */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap');
 
-:root {
-  color-scheme: dark;
+:root{
+  --slate-950: #020617;
+  --slate-900: #0f172a;
+  --slate-800: #111827;
+  --slate-700: #374151;
+  --slate-400: #94a3b8;
+  --slate-300: #cbd5e1;
+  --slate-100: #f1f5f9;
+  --sky-500: #38bdf8;
+  --sky-300: #7dd3fc;
+  --green-400: #34d399;
+  --green-500: #10b981;
+  --red-400: #fb7185;
+  --indigo-500: #6366f1;
 }
 
-html {
-  scroll-behavior: smooth;
-}
+*{box-sizing:border-box}
 
-body {
-  background-color: #020617; /* slate-950 */
-  color: #f1f5f9; /* slate-100 */
-  font-family: 'Onest', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  margin: 0;
-  min-height: 100vh;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+html{scroll-behavior:smooth}
 
-* {
-  box-sizing: border-box;
+body{
+  margin:0;
+  min-height:100vh;
+  color:var(--slate-100);
+  background:var(--slate-950);
+  font-family:'Onest', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
 }
