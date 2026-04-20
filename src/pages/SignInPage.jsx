@@ -35,13 +35,16 @@ const SignInPage = () => {
       navigate("/dashboard");
     } catch (error) {
       console.log(error.response.data);
+      
       console.log(error);
+
+      if(error.response.data) setLoading(false)
+      
       if(!error.response.data) {
         setInvalid(true)
       }
 
       if (error.response.data.message === "Email and password is invalid") {
-        setLoading(false);
         setInvalid(true);
         setTimeout(() => {
           setInvalid(false);
@@ -49,7 +52,6 @@ const SignInPage = () => {
       }
 
       if (error.response.data.message === "Email or password is invalid") {
-        setLoading(false);
         setInvalid(true);
         setTimeout(() => {
           setInvalid(false);

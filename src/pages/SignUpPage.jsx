@@ -36,6 +36,8 @@ const SignUpPage = () => {
     } catch (error) {
       console.error("Signup error:", error.response?.status, error.response?.data);
 
+      if(error.response.data) setLoading(false)
+
       if(error.response.data.message === "Account already exists"){
         setInvalid(true)
         setLoading(false)
@@ -224,7 +226,7 @@ const SignUpPage = () => {
                 type="submit"
                 disabled={loading}
               >
-                {loading ? '' : 'Sign In'}
+                {loading ? '' : 'Sign Up'}
                 <HashLoader
                   loading={loading}
                   color="#1c1c1d"
